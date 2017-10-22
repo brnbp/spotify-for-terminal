@@ -1,6 +1,6 @@
 ## SPT - Spotify Player for Terminal
 
-*spt* is a really simple NodeJS script to control
+spt is a really simple NodeJS script to control
  [Spotify](https://www.spotify.com) from the command line on a Mac.
 
 ### Installation
