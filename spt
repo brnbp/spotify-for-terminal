@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 const yargs = require('yargs')
-
 const Commands = require('./commands/attributes')
 const Actions = require('./commands/actions')
 const Application = require('./commands/application')
@@ -32,7 +31,3 @@ yargs
     Application.close()
   })
   .argv
-
-
-
-
