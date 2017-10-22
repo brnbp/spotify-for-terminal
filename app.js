@@ -1,5 +1,6 @@
 const exec = require('child_process').exec;
 const yargs = require('yargs')
+const {api_token} = require('./config')
 
 const util = require('util');
 const execAsync = util.promisify(require('child_process').exec);
@@ -64,6 +65,19 @@ yargs
    })
   .command('status', 'status music', ()=>{}, argv => {
     getStatus()
+  })
+  .command('search [song]', 'search song', () => {}, argv => {
+    if (!api_token) {
+      console.log('command requires api token')
+      return
+    }
+    curl = 'curl -s -X GET "https://api.spotify.com/v1/search?q=' + argv.song + '&type=track&limit=1" -H "Accept: application/json" -H "Authorization: Bearer ' + api_token + '"'
+    grep = ' | grep -E -o "spotify:track:[a-zA-Z0-9]+" -m 1'
+    exec(curl + grep, function(err, stdout){
+      console.log(stdout)
+      exec('osascript -e \'tell application "Spotify" to play track "' + stdout.trim() + '"\'')
+      getStatus();
+    })
   })
   .argv
 
