@@ -48,5 +48,6 @@ You need to install the script manually by following a few steps:
 
      spt open      Open Spotify.
      spt quit      Stops playback and quits Spotify.
+
      spt --help    Shows a summary of available commands
    ````
