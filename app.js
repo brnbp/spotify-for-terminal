@@ -1,6 +1,9 @@
 const exec = require('child_process').exec;
 const yargs = require('yargs')
 
+const util = require('util');
+const execAsync = util.promisify(require('child_process').exec);
+
 yargs
   .command('play', 'play music', () => {}, (argv) => {
     console.log('Playing:')
