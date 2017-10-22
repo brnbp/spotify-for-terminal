@@ -8,7 +8,33 @@ const album = async () =>  (await execAsync(' osascript -e \'tell application "S
 const song = async () =>  (await execAsync(' osascript -e \'tell application "Spotify" to name of current track as string\'')).stdout
 const songNumber = async () => (await execAsync(' osascript -e \'tell application "Spotify" to track number of current track as string\'')).stdout
 
+const duration = async () => {
+  const rawDuration = (await execAsync('osascript -e \'tell application "Spotify" to (duration of current track / 1000) as integer\'')).stdout
+  
+  const duration = Math.round(rawDuration)
+  const minutes = Math.floor(duration / 60)
+  let seconds = duration % 60
 
+  if (seconds < 10) {
+    seconds = '0' + seconds
+  }
+
+  return minutes + ':' + seconds
+}
+
+const currentPosition = async () => {
+  const rawPosition = (await execAsync('osascript -e \'tell application "Spotify" to player position as integer\'')).stdout
+  
+  const position = Math.round(rawPosition)
+  const minutes = Math.floor(position / 60)
+  let seconds = position % 60
+
+  if (seconds < 10) {
+    seconds = '0' + seconds
+  }
+
+  return minutes + ':' + seconds
+}
 
 yargs
   .command('play', 'play music', () => {}, (argv) => {
