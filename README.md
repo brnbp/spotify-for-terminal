@@ -12,10 +12,10 @@ spt is a really simple NodeJS script to control
 You need to install the script manually by following a few steps:
 
 1. Fetch a copy of this repository.
-  ````
-    Ex: 
-      $ git clone git@github.com:brnbp/spotify-for-terminal.git && cd spotify-for-terminal
-  ````
+   ````
+     Ex: 
+       $ git clone git@github.com:brnbp/spotify-for-terminal.git && cd spotify-for-terminal
+   ````
 
 2. Navigate to the folder where you fetched the repository and install dependencies:
    ````
