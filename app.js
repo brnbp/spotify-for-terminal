@@ -36,6 +36,11 @@ const currentPosition = async () => {
   return minutes + ':' + seconds
 }
 
+const getStatus = async () => {
+  console.log((await artist()).trim() + ' - ' + (await album()).trim())
+  console.log((await song()).trim() + ' - ' + (await currentPosition()) + '/' + (await duration()))
+}
+
 yargs
   .command('play', 'play music', () => {}, (argv) => {
     console.log('Playing:')
