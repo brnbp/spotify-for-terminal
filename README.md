@@ -37,16 +37,16 @@ You need to install the script manually by following a few steps:
 
 ## Usage
 
-    ````
-    spt play      Play current song.
-    spt pause     Pause current song.
+   ````
+     spt play      Play current song.
+     spt pause     Pause current song.
 
-    spt next      Skip to the next song.
-    spt prev      Return to the previous song.
+     spt next      Skip to the next song.
+     spt prev      Return to the previous song.
 
-    spt status    Shows the play status, including the current song details.
+     spt status    Shows the play status, including the current song details.
 
-    spt open      Open Spotify.
-    spt quit      Stops playback and quits Spotify.
-    spt --help    Shows a summary of available commands
-    ````
+     spt open      Open Spotify.
+     spt quit      Stops playback and quits Spotify.
+     spt --help    Shows a summary of available commands
+   ````
