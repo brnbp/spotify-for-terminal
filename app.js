@@ -3,6 +3,12 @@ const yargs = require('yargs')
 
 const util = require('util');
 const execAsync = util.promisify(require('child_process').exec);
+const artist = async () => (await execAsync(' osascript -e \'tell application "Spotify" to artist of current track as string\'')).stdout
+const album = async () =>  (await execAsync(' osascript -e \'tell application "Spotify" to album of current track as string\'')).stdout
+const song = async () =>  (await execAsync(' osascript -e \'tell application "Spotify" to name of current track as string\'')).stdout
+const songNumber = async () => (await execAsync(' osascript -e \'tell application "Spotify" to track number of current track as string\'')).stdout
+
+
 
 yargs
   .command('play', 'play music', () => {}, (argv) => {
