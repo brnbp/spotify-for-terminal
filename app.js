@@ -10,6 +10,14 @@ yargs
     console.log('Pausing:')
     exec('osascript -e \'tell application "Spotify" to pause\'')
    })
+   .command('next', 'next music', () => {}, (argv) => {
+    console.log('Playing Next:')
+    exec('osascript -e \'tell application "Spotify" to next track\'')
+   })
+  .command('prev', 'previous music', () => {}, (argv) => {
+    console.log('Playing Previous:')
+    exec('osascript -e \'tell application "Spotify" \n set player position to 0  \n  previous track  \n end tell\'')
+   })
   .argv
 
 
