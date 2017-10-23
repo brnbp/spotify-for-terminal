@@ -1,24 +1,24 @@
+#!/usr/bin/env node
 const yargs = require('yargs')
-
 const Commands = require('./commands/attributes')
 const Actions = require('./commands/actions')
 const Api = require('./commands/api')
 const Application = require('./commands/application')
 
 yargs
-  .command('play', 'play music', () => {}, (argv) => {
+  .command('play', 'play music', () => {
     Actions.play()
     Commands.getStatus()
    })
-  .command('pause', 'pause music', () => {}, (argv) => {
+  .command('pause', 'pause music', () => {
     Actions.pause()
     Commands.getStatus()
    })
-   .command('next', 'next music', () => {}, (argv) => {
+   .command('next', 'next music', () => {
     Actions.next()
     Commands.getStatus()
    })
-  .command('prev', 'previous music', () => {}, (argv) => {
+  .command('prev', 'previous music', () => {
     Actions.previous()
     Commands.getStatus()
    })
@@ -31,17 +31,13 @@ yargs
       Commands.getStatus()
     })
   })
-  .command('status', 'status music', () => {}, argv => {
+  .command('status', 'status music', () => {
     Commands.getStatus()
   })
-  .command('open', 'status music', () => {}, argv => {
+  .command('open', 'status music', () => {
     Application.open()
   })
-  .command('close', 'status music', () => {}, argv => {
+  .command('close', 'status music', () => {
     Application.close()
   })
   .argv
-
-
-
-
