@@ -1,5 +1,5 @@
 const exec = require('child_process').exec;
-const {api_token} = require('../config')
+const {api_token} = require('../config/config')
 
 class Api {
     getUri() {

@@ -22,7 +22,7 @@ yargs
     Actions.previous()
     Commands.getStatus()
    })
-  .command('search [song]', 'search song', () => {}, argv => {
+  .command('search [song]', 'search song', () => {
     console.log('not available yet - wip')
     return
     Api.findSong(argv.song, function(error, stdout, stderr) {
