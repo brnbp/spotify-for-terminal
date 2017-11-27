@@ -1,14 +1,14 @@
-const exec = require('child_process').exec;
+const osascript = require('node-osascript');
 
 class Application {
     open() {
         console.log('Oppening Spotify')
-        exec('osascript -e \'tell application "Spotify" to activate\'')
+        osascript.execute('tell application "Spotify" to activate')
     }
 
     close() {
         console.log('Closing Spotify')
-        exec('osascript -e \'tell application "Spotify" to quit\'')
+        osascript.execute('tell application "Spotify" to quit')
     }
 }
 

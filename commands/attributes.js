@@ -40,7 +40,7 @@ class Commands {
         let seconds = position % 60
     
         if (seconds < 10) {
-        seconds = '0' + seconds
+            seconds = '0' + seconds
         }
     
         return minutes + ':' + seconds
