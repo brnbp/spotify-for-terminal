@@ -7,7 +7,8 @@ spt is a really simple NodeJS script to control
 
 #### Minimum requirements:
   - node: >= 7.6
-  - macOs Sierra or newer
+  - yarn
+  - macOS Sierra or newer
 
 You need to install the script manually by following a few steps:
 
@@ -30,7 +31,7 @@ You need to install the script manually by following a few steps:
 4. Make a symbolic link for spt at a convenient location in your PATH, or set your PATH to include the folder where the file is located. 
     ````
       Ex: 
-        $ sudo ln -s /full/path/to/spotify-for-terminal/spt /usr/local
+        $ sudo ln -s $PWD/spt /usr/local/bin
     ````
 
 ## Usage
