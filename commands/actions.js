@@ -6,6 +6,11 @@ class Actions {
         osascript.execute('tell application "Spotify" to play')
     }
 
+    playTrack(track) {
+        console.log('Playing:')
+        exec('osascript -e \'tell application "Spotify" to play track "' + track + '"\'')
+    }
+
     pause() {
         console.log('Pausing:')
         osascript.execute('tell application "Spotify" to pause')
